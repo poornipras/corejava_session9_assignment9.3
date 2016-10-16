@@ -1,0 +1,42 @@
+Create an application having a Generic HashMap with Empcode as key and EmpName as value.
+6. Expected Output
+Display only EmpNames as output.
+
+
+
+package session9;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class employeemap 
+{
+	public static void main(String[] args) 
+	{
+	Map<Integer,String> employee=new HashMap<Integer,String>();
+	
+	employee.put(1,"Ajay");
+	employee.put(6, "Zafar");
+	employee.put(5,"Narendra");
+	employee.put(2, "Vijay");
+	employee.put(3,"Prasanna");
+	employee.put(9,"Rohit");
+	
+	Set<Integer> key=employee.keySet();
+	System.out.println("Printing Employee Names");
+
+	for (Integer empcode : key) 
+	{
+		System.out.println(" Employee Name :" +employee.get(empcode));
+	}
+	
+	System.out.println("Displaying both Employee Code and Employee Name:");
+	for(Integer empcode:key)
+	{
+		System.out.println("Employee code: "+ empcode +" Employee Name :" +employee.get(empcode));
+		
+	}
+	}
+
+}
